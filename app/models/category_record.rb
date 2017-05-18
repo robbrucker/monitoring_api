@@ -3,7 +3,7 @@ class CategoryRecord < ApplicationRecord
   attr_accessor :total_time
   default_scope { order(id: :desc) }
   def total_time
-    if end_time
+    if end_time && start_time
       return TimeDifference.between(start_time, end_time).humanize
     end
   end
