@@ -6,4 +6,4 @@ API for keeping time on specific tasks.
 <li>Postgres</li>
 
 
-Front end site lives at <a href="http://monitor.brucker.tech/">http://monitor.brucker.tech</a> and the API lives at: <a href="http://monitorapi.brucker.tech">http://monitorapi.brucker.tech</a>
+Front end site lives at <a href="https://monitor.brucker.tech/">https://monitor.brucker.tech</a> and the API lives at: <a href="https://monitorapi.brucker.tech">https://monitorapi.brucker.tech</a>
