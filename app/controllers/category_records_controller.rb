@@ -45,6 +45,11 @@ class CategoryRecordsController < ApiController
     render json: 200
   end
 
+  def todays_details
+    records = CategoryRecords::GetTodaysRecordsService.init(params)
+    render :json => records
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category_record
