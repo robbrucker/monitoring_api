@@ -4,8 +4,12 @@ class CategoryTagsController < ApplicationController
   # GET /category_record_tags
   def index
     @category_tags = CategoryTag.all
+    if params[:fuzzy]
+      render json: Tag.where(:id => CategoryTag.where("name LIKE ?", "%#{params[:fuzzy]}%").select(:tag_id))
+    else
+      render json: Tag.where(:id => CategoryTag.all.select(:tag_id))
+    end
 
-    render json: Tag.where(:id => CategoryTag.all.select(:tag_id))
   end
 
   # GET /category_record_tags/1
@@ -13,9 +17,6 @@ class CategoryTagsController < ApplicationController
     render json: @category_tag
   end
 
-  def fuzzy_search
-
-  end
 
   # POST /category_record_tags
   def create
@@ -50,6 +51,6 @@ class CategoryTagsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
   def category_tag_params
-    params.require(:category_tag).permit(:category_id, :tag_id, :user_id)
+    params.require(:category_tag).permit(:category_id, :tag_id, :user_id, :fuzzy)
   end
 end

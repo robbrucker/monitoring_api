@@ -66,6 +66,9 @@ GEM
       puma (~> 3.4)
     coderay (1.1.1)
     concurrent-ruby (1.0.5)
+    dotiw (3.1.1)
+      actionpack (>= 3)
+      i18n
     erubis (2.7.0)
     ffi (1.9.18)
     globalid (0.4.0)
@@ -84,6 +87,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    multi_json (1.12.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.1.0)
@@ -127,6 +131,8 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    rollbar (2.14.1)
+      multi_json
     slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -165,12 +171,14 @@ DEPENDENCIES
   capistrano-rails (~> 1.1)
   capistrano-rbenv (~> 2.0)
   capistrano3-puma
+  dotiw
   listen (~> 3.0.5)
   pg
   pry
   puma (~> 3.0)
   rack-cors
   rails (~> 5.0.2)
+  rollbar
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

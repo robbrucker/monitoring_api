@@ -28,7 +28,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
-
+gem 'dotiw'
+gem 'rollbar'
 group :development do
   gem 'listen', '~> 3.0.5'
     gem 'capistrano', '~> 3.6.0'
