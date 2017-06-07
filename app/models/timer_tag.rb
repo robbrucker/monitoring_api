@@ -1,0 +1,2 @@
+class TimerTag < ApplicationRecord
+end
